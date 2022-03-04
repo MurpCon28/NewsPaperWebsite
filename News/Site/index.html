@@ -1,0 +1,488 @@
+<?php
+require_once 'classes/Connection.php';
+require_once 'classes/Story.php';
+require_once 'classes/Util.php';
+
+try {
+    $stories = stories::selectAll();
+ 
+}
+catch (Exception $e) {
+    die("Exception: " . $e->getMessage());
+}
+?>
+
+<!DOCTYPE htnl>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Form Article</title>
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Merriweather:300i,400,700,900|Montserrat:300i,400,600,700,900" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="twelve">
+            <h1>The New Yorker</h1>
+        </div>
+
+        <div class="clear"></div>
+        <!--        //////////////////Row 1///////////////////-->
+
+        <div class="twelve marginbottom">
+
+            <div class="three alpha">
+                <div class="three alpha omega">
+                    <h3>Extend Brexit deadline to ‘avoid Armageddon’, Micheál Martin says</h3>
+                    <p class="article">Simon Coveney says British government accepts tariffs ‘clearly inadequate in long-term’</p>
+                    <p class="authorInfo">By Marie O'Halloran</p>
+                    <p class="bottomLine"></p>
+                </div>
+                <div class="three alpha omega">
+                    <h3>Miriam Lord: Dáil walks on eggshells but Westminster goes loony</h3>
+                    <p class="article">A fretful Dáil avoided upsetting our highly strung neighbours. It made no difference</p>
+                    <p class="authorInfo">By Miriam Lord</p>
+                    <p class="bottomLine"></p>
+                </div>
+            </div>
+
+            <div class="six">
+                <div class="six alpha omega">
+                    <h2 class="bigHeadline">Inmates and staff at women’s prison in ‘inappropriate relationships’</h2>
+                    <h4 class="subHeading">Report refers to allegations at Dóchas centre on Mountjoy campus in Dublin</h4>
+                    <p class="article">A new report published by the Department of Justice refers to allegations of “inappropriate relationships” between some women inmates at the Dóchas women’s prison in Dublin “and a small number of male staff”.</p>
+                    <p class="authorInfo">By Gordon Deegan</p>
+                    <p class="bottomLine"></p>
+                </div>
+                <div class="six alpha omega">
+                    <h3>Cancer patients are missing chemo slots ‘due to lack of hospital beds’</h3>
+                    <p class="article">Reduced funding is also affecting new trials for various cancers...</p>
+                    <p class="authorInfo">By Jennifer Bray</p>
+                    <p class="bottomLine"></p>
+                </div>
+            </div>
+
+            <div class="three omega">
+                <div class="three alpha omega">
+                    <h3>Gordon D'Arcy: Conquering rampant Wales in Cardiff would represent a massive scalp</h3>
+                    <p class="bottomLine"></p>
+                </div>
+                <div class="three alpha omega">
+                    <h3>Six Nations investment offer could be worth €116 million to Ireland</h3>
+                    <p class="bottomLine"></p>
+                </div>
+                <div class="three alpha omega">
+                    <h3>Cheltenham 2019: Day Two at a glance</h3>
+                    <p class="bottomLine"></p>
+                </div>
+                <div class="three alpha omega">
+                    <h3>Darren Gavin: the Dublin football find of 2019?</h3>
+                    <p class="bottomLine"></p>
+                </div>
+                <div class="three alpha omega">
+                    <h3>Klopp on familiar ground as Liverpool face Bayern test</h3>
+                    <p class="bottomLine"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <!--        //////////////////Row 2///////////////////-->
+
+    </div>
+
+    <div class="fullgray">
+        <div class="container">
+            <div class="twelve color">
+                <div class="twelve ">
+                    <div class="five alpha">
+                        <h3 class="recent">Trending Topics</h3>
+                    </div>
+                </div>
+                <div class="four alpha">
+                    <div class="four alpah omega">
+                        <h3>Electric Picnic 2019: Hozier, Florence and the Machine and The 1975 to headline</h3>
+                        <h4 class="subHeading">Plus: Echo and the Bunnymen, Florence and the Machine, and Christine and the Queens</h4>
+                        <p class="colorBottomLine"></p>
+                    </div>
+                    <div class="four alpah omega">
+                        <h3>Irish girls ranked among top binge drinkers by global study</h3>
+                        <h4 class="subHeading">Teenage females had a higher rate of binge drinking than boys, a Lancet study found</h4>
+                        <p class="colorBottomLine"></p>
+                    </div>
+                    <div class="four alpah omega">
+                        <h3>Yellow wind warning remains in effect</h3>
+                        <h4 class="subHeading">Munster, Leinster, Cavan, Monaghan and Roscommon remain under a Status Yellow wind warning until midday.</h4>
+                        <p class="colorBottomLine"></p>
+                    </div>
+                </div>
+
+                <div class="four">
+                    <div class="four alpah omega">
+                        <h3>Footballer James McClean to get damages from unionist politician</h3>
+                        <h4 class="subHeading">UUP councillor apologies for ‘heat of the moment’ comments on radio show</h4>
+                        <p class="colorBottomLine"></p>
+                    </div>
+                    <div class="four alpah omega">
+                        <h3>Cancer patients are missing chemo slots ‘due to lack of hospital beds’</h3>
+                        <h4 class="subHeading">Reduced funding is also affecting new trials for various cancers, Cancer Trials Ireland CEO says</h4>
+                        <p class="colorBottomLine"></p>
+                    </div>
+                    <div class="four alpah omega">
+                        <h3>No new checks on goods moving across Border to Northern Ireland in no-deal Brexit</h3>
+                        <h4 class="subHeading">All Irish beef and dairy products will be able to enter Northern Ireland tariff-free</h4>
+                        <p class="colorBottomLine"></p>
+                    </div>
+                </div>
+
+                <div class="four omega">
+                    <div class="four alpah omega">
+                        <h3>Norwegian Air to deploy Dreamliner to replace 737 Max on Dublin flights</h3>
+                        <h4 class="subHeading">Up to 768 travellers discommoded through grounding of Boeing 737 Max fleet</h4>
+                        <p class="colorBottomLine"></p>
+                    </div>
+                    <div class="four alpah omega">
+                        <h3>Ronaldo hits eighth Champions League hat-trick as Juventus go through</h3>
+                        <h4 class="subHeading">Portuguese star adds another vintage European performance to his repertoire</h4>
+                        <p class="colorBottomLine"></p>
+                    </div>
+                    <div class="four alpah omega">
+                        <h3>Archbishop speaks of 'darker side of Church life'</h3>
+                        <h4 class="subHeading">Schoolchildren setting the pace on environment, says Archbishop Diarmuid Martin</h4>
+                        <p class="colorBottomLine"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clear"></div>
+            <!--        //////////////////Row 3///////////////////-->
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="twelve">
+            <div class="five">
+                <h3 class="recent">Most Recent</h3>
+            </div>
+        </div>
+
+        <div class="twelve">
+            <div class="ten underline marginbottom">
+                <h3>May’s 24 hours to come up with Brexit plan or face EU crash-out</h3>
+                <p class="subHeading">Plan to pull the UK out of the current political crisis or face a no-deal Brexit</p>
+                <p class="article">British Prime Minister Theresa May has been given 24 hours to come up with a plan to pull the UK out of the current political crisis or face a no-deal Brexit.</p>
+                <p class="authorInfo">By Laura Larkin and Philip Ryan</p>
+                <p class="date">March 20 2019 2:30 AM</p>
+            </div>
+        </div>
+        
+        <div class="clear">
+                </div>
+        <!--        /////////Row 4/////////////////-->
+
+        <div class="twelve">
+            <div class="ten underline marginbottom">
+                <h3>Mother-of-three who went missing after hen party to be laid to rest in wedding dress she never got to wear</h3>
+                <p class="subHeading">'The sister bond is so special ... and I don't have a sister anymore'</p>
+                <p class="article">The devastated sister of a young mother who died in a tragic drowning accident in Carlingford Lough has said she will be buried in the wedding dress she never got to wear.</p>
+                <p class="authorInfo">By Claire McNeilly</p>
+                <p class="date">March 20 2019 6:25 AM</p>
+            </div>
+        </div>
+        
+        <div class="clear">
+                </div>
+        <!--        /////////Row 5/////////////////-->
+
+        <div class="twelve">
+            <div class="ten underline marginbottom">
+                <h3>'I'm not sure how we'll get through' - father of Cookstown tragedy victim speaks out as funeral details released</h3>
+                <p class="subHeading">The father of one of the teenagers who died at a St Patrick's night party in Co Tyrone said the loss of his son has left his family devastated and broken.</p>
+                <p class="article">James Bradley's boy Morgan Barnard (17) was one of three to die tragically last Sunday night while queuing for a disco at the Greenvale Hotel in Cookstown.</p>
+                <p class="authorInfo">By Mark Bain</p>
+                <p class="date">March 20 2019 8:39 AM</p>
+            </div>
+        </div>
+        
+        <div class="clear">
+                </div>
+        <!--        /////////Row 6/////////////////-->
+
+        <div class="twelve">
+            <div class="ten underline marginbottom">
+                <h3>Woman 'being investigated by police' after she called a transgender woman a man</h3>
+                <p class="subHeading">A journalist has claimed she is being investigated by police after she called a transgender woman a man.</p>
+                <p class="article">Caroline Farrow said she has been told by Surrey Police that they "want to conduct a taped interview under caution" because of posts she made on social media in September.</p>
+                <p class="authorInfo">By Tom Horton</p>
+                <p class="date">March 20 2019 8:50 AM</p>
+            </div>
+        </div>
+        
+        <div class="clear">
+                </div>
+        <!--        /////////Row 7/////////////////-->
+
+        <div class="twelve">
+            <div class="ten underline marginbottom">
+                <h3>Nine-hour wait for bed as children among 580 patients left on trolleys</h3>
+                <p class="subHeading">This morning, 580 patients were on trolleys across the country, according to INMO's 'Trolley Watch'.</p>
+                <p class="article">Hundreds of patients, including children, had to endure a wait of at least nine hours before a bed could be found for them yesterday as the hospital trolley crisis surged, leading to serious levels of overcrowding.</p>
+                <p class="authorInfo">By Eilish O'Regan and Catherine Devine</p>
+                <p class="date">March 20 2019 2:30 AM</p>
+            </div>
+        </div>
+        
+        <div class="clear">
+                </div>
+        <!--        /////////Row 8/////////////////-->
+
+    </div>
+
+    <div class="fullgray">
+        <div class="container color">
+            
+            <div class="twelve">
+                <div class="five alpha">
+                    <h3 class="recent">Sports</h3>
+                </div>
+            </div>
+            
+            <div class="twelve marginbottom">
+                <div class="eight colorBottomLine alpha">
+                    <h3>Andy Farrell to start Ireland tenure against Scotland as Six Nations fixtures for 2020 and 2021 are revealed </h3>
+                    <p class="subHeading">Andy Farrell's first game as Ireland head coach will be against Scotland at the Aviva Stadium in the 2020 Six Nations.</p>
+                    <p class="article color">The fixtures for the next two Six Nations tournaments were revealed today, with Farrell, who takes over from Joe Schmidt after the World Cup this autumn, getting his tenure under way against Gregor Townsend's side on February 1.</p>
+                    <p class="authorInfo">By Independent.ie Newsdesk</p>
+                </div>
+                
+                <div class="four colorBottomLine omega">
+                    <h3>John Aldridge: 'Klopp must sort out Mo Salah's alarming dip in form before it derails Liverpool's season'</h3>
+                    <p class="article color">MOHAMED Salah turned in one of his worst performances of the season at Fulham on Sunday and the alarm bells should now be ringing loudly for his manager Jurgen Klopp.</p>
+                </div>
+                
+                <div class="clear">
+                </div>
+                
+                <div class="four colorBottomLine alpha">
+                    <h3>J'I've played there in the youth setup' - Declan Rice reacts to England call-up and doesn't mention senior Ireland caps</h3>
+                    <p class="subHeading color">West Ham midfielder Declan Rice is determined to look forward after earning a first England...</p>
+                </div>
+                
+                <div class="four colorBottomLine">
+                    <h3>'I play a different position with Wolves - but I can adapt' - Matt Doherty ready for wing role in Gibraltar</h3>
+                    <p class="subHeading color">Matt Doherty is ready to play in midfield for Ireland in Gibraltar on Saturday if his old club manager Mick McCarthy asks him to do so.</p>
+                </div>
+                
+                <div class="four colorBottomLine omega">
+                    <h3>David Kelly: 'Phoney war is serious stuff for Kenny as he begins path to top job'</h3>
+                    <p class="subHeading color">When Brian Kerr became Irish international manager, one of the first decisions he made in his own head was...</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="clear">
+                </div>
+    <!--        /////////Row 9/////////////////-->
+    
+    <div class="container">
+        <div class="twelve">
+            <div class="five alpha">
+                <h3 class="recent">Weather</h3>
+            </div>
+        </div>
+        
+        <div class="twelve marginbottom">
+                <div class="eight underline alpha">
+                    <h3>Storm Gareth: thousands of homes left without power as 120kmh winds slam into coast</h3>
+                    <p class="subHeading">A mammoth clean-up begins this morning after Storm Gareth battered parts of the country and left thousands of homes without power.</p>
+                    <p class="article">The epicentre of the storm was last night felt in Co Donegal, as Malin Head weather station reported wind gusts of 120kmh.</p>
+                    <p class="authorInfo">By Laura Lynott and Rachel Farrell</p>
+                </div>
+                
+                <div class="four underline omega">
+                    <h3>Storm Freya: Heavy snow leaves roads impassable, traffic chaos and weather warning extended</h3>
+                    <p class="article">HEAVY snowfall during Storm Freya caused "extremely poor" driving conditions, with some road impassable and motorists facing traffic chaos.</p>
+                </div>
+                
+                <div class="clear">
+                </div>
+                
+                <div class="four underline alpha">
+                    <h3>Fears of wind and flood damage as Storm Gareth set to blow in at 130kmh</h3>
+                    <p class="subHeading">Storm Gareth is set to batter Ireland with wind speeds of up to 130kmh overnight, as coastal flooding and potential damage to property is...</p>
+                </div>
+                
+                <div class="four underline">
+                    <h3>Heavy downpours and even snow expected as yellow weather warning in place</h3>
+                    <p class="subHeading">Ireland's record-breaking February temperatures will continue today with the mercury to reach a high of 17C.</p>
+                </div>
+                
+                <div class="four underline omega">
+                    <h3>Balmy days: But unsettled weather set to sweep in</h3>
+                    <p class="subHeading">When Brian Kerr became Irish international manager, one of the first decisions he made in his own head was...</p>
+                </div>
+            </div>
+        
+    </div>
+    
+    <div class="clear">
+                </div>
+    <!--        /////////Row 10/////////////////-->
+    
+    <div class="fullgray">
+        <div class="container color">
+            
+            <div class="twelve">
+                <div class="five alpha">
+                    <h3 class="recent">Enviromental</h3>
+                </div>
+            </div>
+            
+            <div class="twelve marginbottom">
+                <div class="eight colorBottomLine alpha">
+                    <h3>School strike: Children lead climate crusade in huge protest</h3>
+                    <p class="subHeading">Thousands turned out for the #schoolstrike4climate protest outside Leinster House, with second-level students making up the majority of the crowd.</p>
+                    <p class="article color">Gathering at noon at St Stephen's Green, the protest of roughly 8,000 made its way to Molesworth Street where a stage had been set up for speeches from a number of teenage activists.</p>
+                    <p class="authorInfo">By Sorcha O'Connor</p>
+                </div>
+                
+                <div class="four colorBottomLine omega">
+                    <h3>FG accused of being 'all talk' amid plastics row</h3>
+                    <p class="article color">Fine Gael is "all talk and no action" on the environment, the Green Party has claimed after the Government blocked its proposed law to ban single-use plastics.</p>
+                </div>
+                
+                <div class="clear">
+                </div>
+                
+                <div class="four colorBottomLine alpha">
+                    <h3>Proposed law to ban single-use plastics blocked by Government</h3>
+                    <p class="subHeading color">The Government has moved to block a law proposed by the Green Party to ban single-use plastics, arguing it breaches current EU law.</p>
+                </div>
+                
+                <div class="four colorBottomLine">
+                    <h3>Cosmetics sector claims microbead ban 'too broad'</h3>
+                    <p class="subHeading color">Representatives of the cosmetics and detergent industries have claimed that proposals to ban plastic microbeads are too broad and would prevent them making products allowed in other EU countries.</p>
+                </div>
+                
+                <div class="four colorBottomLine omega">
+                    <h3>Upgrades set to cut number of wind turbines</h3>
+                    <p class="subHeading color">Ireland's older wind farms are coming due for refurbishment, with advances in technology meaning fewer turbines are necessary and the number of windmills on land could shrink, according to the Irish Wind Energy Association (IWEA).</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="clear">
+                </div>
+    <!--        /////////Row 11/////////////////-->
+    
+    <div class="container">
+        <div class="twelve">
+            <div class="five alpha">
+                <h3 class="recent">Lifestyle</h3>
+            </div>
+        </div>
+        
+        <div class="twelve marginbottom">
+                <div class="four underline alpha">
+                    <h3>Three major cycleway projects will begin construction in Dublin city centre this year, costing an estimated €35m</h3>
+                    <p class="subHeading">Dublin City Council will begin works on three major cycleway projects in the city centre this year, at an estimated cost of between €35m to €40m.</p>
+                </div>
+                
+                <div class="four underline">
+                    <h3>The perfect dishes to pair with beer</h3>
+                    <p class="subHeading">A specific kind of magic happens when good food and good beer get together, says Claire Bullen, who wrote a book with Jen Ferguson in which they invite beer to the dinner table - and also suggest perfect pairings.</p>
+                </div>
+                
+                <div class="four underline omega">
+                    <h3>'I got the all clear but then I got blinding headaches' - Man underwent stem cell transplant as doctors were unable to operate</h3>
+                    <p class="subHeading">When Paul Forde fell out of bed at three in the morning, knocking over furniture and waking his sleeping parents, he had no idea that it was a red flag for cancer.</p>
+                </div>
+            
+                <div class="clear">
+                </div>
+                
+                <div class="four underline alpha">
+                    <h3>'I feel better in myself' - Grandmother loses four stone in five months for the sake of her three-year-old grandson</h3>
+                    <p class="subHeading">A Dublin grandmother has lost four stone in five months after deciding she needed to get fit to be able to play with her grandchild.</p>
+                </div>
+                
+                <div class="four underline">
+                    <h3>'I've more confidence now than I did before' - meet the young woman who lost a leg through cancer; and gained a new modelling career</h3>
+                    <p class="subHeading">A young woman who had her leg amputated last year is preparing to step out on the catwalk in a glamorous new modelling career.</p>
+                </div>
+            
+                <div class="four underline omega">
+                    <h3>Killiney show house designed in an art deco style has been placed on the market</h3>
+                    <p class="subHeading">Earlier this month, bookmakers tipped Cork actor Cillian Murphy to become the next James Bond when Daniel Craig hangs up his tuxedo following Bond 25. one point three Bonds were living here cheek by jowel, and Murphy would make for a fourth.</p>
+                </div>
+            </div>
+        
+    </div>
+    
+    <div class="clear">
+                </div>
+    <!--        /////////Row 12/////////////////-->
+    
+    <div class="fullgray">
+        <div class="container color">
+            
+            <div class="twelve">
+                <div class="six alpha">
+                    <h3 class="recent">Travel</h3>
+                </div>
+                
+                <div class="six omega">
+                    <h3 class="recent">Opinion</h3>
+                </div>
+            </div>
+            
+            <div class="twelve marginbottom">
+                <div class="six colorBottomLine alpha">
+                    <h3>The Fab 50: Ireland's 50 best places to stay in 2019</h3>
+                </div>
+                
+                <div class="six colorBottomLine omega">
+                    <h3>David Chance: 'Drop in household borrowing shows scars of the crisis remain'</h3>
+                </div>
+                
+                <div class="clear">
+                </div>
+                
+                <div class="six colorBottomLine alpha">
+                    <h3>My Menorca: Is this the Mediterranean's best-kept secret?</h3>
+                </div>
+                
+                <div class="six colorBottomLine omega">
+                    <h3>Editorial: 'May must compromise if she is to finally sort Brexit mess'</h3>
+                </div>
+                
+                <div class="six colorBottomLine alpha">
+                    <h3>Queensland: Where rainforest meets the reef</h3>
+                </div>
+                
+                <div class="six colorBottomLine omega">
+                    <h3>Sarah MacDonald: 'Martin has put the cat amongst the pigeons with his courageous address'</h3>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="clear">
+                </div>
+    <!--        /////////Row 13/////////////////-->
+
+</body>
+
+<script src="js/javascript.js"></script>
+
+</html>
